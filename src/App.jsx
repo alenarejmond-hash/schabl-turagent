@@ -1882,7 +1882,18 @@ export default function App() {
       /* iOS Safari Fix: предотвращает исчезновение картинок при скруглении */
       .overflow-hidden {
         -webkit-mask-image: -webkit-radial-gradient(white, black);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        will-change: transform;
         isolation: isolate;
+      }
+      
+      .overflow-hidden img {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        will-change: transform;
       }
       
       @keyframes morph {
