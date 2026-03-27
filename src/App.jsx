@@ -1973,10 +1973,10 @@ export default function App() {
       >
         {!isPanelOpen ? (
           <>
-            {/* Яркая подсказка-указатель */}
-            <div className="absolute top-1.5 right-14 animate-pulse pointer-events-none flex items-center">
-              <div className="bg-slate-900/90 backdrop-blur-sm text-white text-[10px] uppercase tracking-widest font-bold px-4 py-2 rounded-2xl shadow-lg whitespace-nowrap flex items-center gap-2 border border-white/10">
-                Выбрать дизайн <ArrowRight className="w-3 h-3 text-cyan-400" />
+            {/* Яркая подсказка-указатель (Уменьшена и сделана компактнее, чтобы не перекрывать фото) */}
+            <div className="absolute top-2.5 right-14 animate-pulse pointer-events-none flex items-center">
+              <div className="bg-slate-900/80 backdrop-blur-sm text-white text-[8px] uppercase tracking-widest font-bold px-3 py-1.5 rounded-full shadow-md whitespace-nowrap flex items-center gap-1.5 border border-white/10">
+                Дизайн <ArrowRight className="w-2.5 h-2.5 text-cyan-400" />
               </div>
             </div>
 

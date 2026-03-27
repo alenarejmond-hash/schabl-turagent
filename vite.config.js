@@ -4,5 +4,5 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
    plugins: [react(), tailwindcss()],
   // Если ссылка: username.github.io/repo/ -> пишем '/repo/'
-base: '/schabl-turagent/',
+base: '/',
 })
