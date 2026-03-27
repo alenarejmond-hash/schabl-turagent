@@ -1879,21 +1879,25 @@ export default function App() {
 
   // Стили-анимации, добавленные глобально, вынесены в переменную (исправление краша)
   const globalStyles = `
-      /* iOS Safari Fix: предотвращает исчезновение картинок при скруглении */
+      /* iOS Safari Fix: Облегченный способ без краша памяти мобилки (чтобы все фото грузились) */
       .overflow-hidden {
         -webkit-mask-image: -webkit-radial-gradient(white, black);
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-        will-change: transform;
         isolation: isolate;
       }
       
-      .overflow-hidden img {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-        will-change: transform;
+      img {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+      }
+      
+      .hide-scrollbar {
+        -ms-overflow-style: none; 
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+      }
+      
+      .hide-scrollbar::-webkit-scrollbar { 
+        display: none; 
       }
       
       @keyframes morph {
