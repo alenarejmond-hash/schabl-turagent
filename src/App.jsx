@@ -11,9 +11,9 @@ if (typeof window !== 'undefined' && !document.getElementById('vk-bridge-script'
 
 // Общие данные для всех шаблонов (чтобы легко было менять текст везде сразу)
 const DATA = {
-  name: "Алена",
-  lastName: "Светлая",
-  role: "Турагент с душой",
+  name: "Марина",
+  lastName: "Хавруцкая",
+  role: "Основатель бутик-турагентства",
   badge: "Влюблена в море",
   // Твоё фото из папки public! Просто положи туда avatar.jpg (БЕЗ СЛЕШЕЙ И ТОЧЕК)
   avatarUrl: "avatar.jpg",
@@ -1963,13 +1963,22 @@ export default function App() {
         }`}
       >
         {!isPanelOpen ? (
-          // Полупрозрачная кнопка (незаметная для клиента)
-          <button 
-            onClick={() => setIsPanelOpen(true)}
-            className="absolute top-0 right-0 w-12 h-12 bg-black/5 hover:bg-black/80 backdrop-blur-sm text-white rounded-full flex items-center justify-center transition-all group shadow-sm hover:shadow-lg"
-          >
-            <Settings className="w-5 h-5 text-gray-500 group-hover:text-white transition-colors animate-spin-slow" style={{ animationDuration: '6s' }} />
-          </button>
+          <>
+            {/* Яркая подсказка-указатель */}
+            <div className="absolute top-1.5 right-14 animate-pulse pointer-events-none flex items-center">
+              <div className="bg-slate-900/90 backdrop-blur-sm text-white text-[10px] uppercase tracking-widest font-bold px-4 py-2 rounded-2xl shadow-lg whitespace-nowrap flex items-center gap-2 border border-white/10">
+                Выбрать дизайн <ArrowRight className="w-3 h-3 text-cyan-400" />
+              </div>
+            </div>
+
+            {/* Полупрозрачная кнопка (незаметная для клиента) */}
+            <button 
+              onClick={() => setIsPanelOpen(true)}
+              className="absolute top-0 right-0 w-12 h-12 bg-black/5 hover:bg-black/80 backdrop-blur-sm text-white rounded-full flex items-center justify-center transition-all group shadow-sm hover:shadow-lg"
+            >
+              <Settings className="w-5 h-5 text-gray-500 group-hover:text-white transition-colors animate-spin-slow" style={{ animationDuration: '6s' }} />
+            </button>
+          </>
         ) : (
           <div className="flex flex-col animate-in fade-in slide-in-from-top-2 duration-300">
             <div className="flex justify-between items-center mb-5">
