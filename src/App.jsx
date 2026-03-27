@@ -20,9 +20,9 @@ if (typeof window !== 'undefined' && !document.getElementById('vk-bridge-script'
 
 // Общие данные для всех шаблонов (чтобы легко было менять текст везде сразу)
 const DATA = {
-  name: "Марина",
-  lastName: "Хавруцкая",
-  role: "Основатель бутик-турагентства",
+  name: "Алена",
+  lastName: "Светлая",
+  role: "Турагент с душой",
   badge: "Влюблена в море",
   // Твоё фото из папки public! Просто положи туда avatar.jpg (БЕЗ СЛЕШЕЙ И ТОЧЕК)
   avatarUrl: "avatar.jpg",
