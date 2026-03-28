@@ -22,7 +22,7 @@ if (typeof window !== 'undefined' && !document.getElementById('vk-bridge-script'
 const DATA = {
   name: "Алена",
   lastName: "Светлая",
-  role: "Туаргент с любовью и заботой",
+  role: "Турагент с душой",
   badge: "Влюблена в море",
   // Твоё фото из папки public! Просто положи туда avatar.jpg (БЕЗ СЛЕШЕЙ И ТОЧЕК)
   avatarUrl: "avatar.jpg",
@@ -1982,7 +1982,7 @@ export default function App() {
 
       {/* --- СКРЫТАЯ ПАНЕЛЬ ПЕРЕКЛЮЧЕНИЯ ДЛЯ ПРЕЗЕНТАЦИИ --- */}
       <div 
-        className={`fixed top-20 right-4 z-[100] transition-all duration-300 ${
+        className={`fixed top-4 right-4 z-[100] transition-all duration-300 ${
           isPanelOpen ? 'bg-white/90 backdrop-blur-xl p-5 rounded-2xl shadow-2xl border border-gray-200 w-80' : 'bg-transparent'
         }`}
       >
